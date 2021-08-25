@@ -1,0 +1,11 @@
+.games_container {
+    background-color: aquamarine;
+    border: 1px solid red;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.games_img {
+    width: 50px;
+    height: 50px;
+}
