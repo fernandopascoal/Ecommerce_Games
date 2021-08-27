@@ -3,6 +3,7 @@ import './App.css';
 
 import './components/Products.css'
 import Header from './components/Header';
+import Nav from './components/Nav';
 
 
 function Products(){
@@ -26,10 +27,13 @@ function Products(){
     <Fragment>
       {products.map((item) => (
         <div className='products_container'>
-            <div className='products_info' >
+            <div key={item.id} className='products_info' >
                 <h2 className='title'>{item.name}</h2>
-                <p className='price'>R$ {item.price.toFixed(2)}</p>
-                <button className='btn'>Adicionar ao Carrinho</button>
+                <di className='price_container'>
+                  <span className='price'>R$ {item.price.toFixed(2)}</span>
+                  <button className='btn'>Adicionar ao Carrinho</button>  
+                </di>
+                
             </div>
             <img src={item.image} alt=""  className='product_img'/>
         </div>
@@ -42,9 +46,12 @@ function Products(){
 export default function App() {
   return (
     <div className="App">
-      <Header/>
-      <div className='Games_Content'>
-        <Products />
+      <div className="App_container">
+        <Header/>
+        <Nav/>
+        <div className='Games_Content' >
+          <Products  />
+        </div>
       </div>
     </div>
   );

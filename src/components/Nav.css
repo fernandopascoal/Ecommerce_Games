@@ -1,0 +1,62 @@
+.form_container{
+    width: 40%;
+    align-self: flex-end;
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav_info{
+    font-size: 20px;
+    color: #cccccc;
+    margin-right: 10px;
+    margin-left: 12px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    position: relative;
+    text-align: right;
+}
+
+.nav_icon {
+    width: 30px;
+    align-self: right;
+    margin: 5px;
+}
+
+.nav_container{
+    width: 100%;
+    border: 1px solid #758b8b;
+    border-radius: 5px;
+    box-shadow: 20px 20px 60px #111111,
+    -20px -20px 60px #1a2222;
+    background-color: #77727298;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    
+}
+
+.nav_list{
+    list-style: none;
+    display: none;
+}
+
+.nav_item{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding-left: 15px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.nav_item:hover{
+    background-color: whitesmoke;
+}
+
