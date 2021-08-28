@@ -3,13 +3,16 @@ import './Cart.css'
 
 export default () => {
 
-
+    function closeCart() {
+        document.querySelector('.cart').style.width = '0px'
+    }
 
 
 
 
     return(
         <aside className='cart'>
+            <button onClick={closeCart}>Fechar</button>
             <div className='cart_products'>
                 <p>Produto</p>
                 <button>excluir</button>

@@ -5,6 +5,8 @@ import './Cart_Button.css'
 export default () => {
 
     function openCart() {
+
+        document.querySelector('.cart').style.width = '500px'
          
     }
 

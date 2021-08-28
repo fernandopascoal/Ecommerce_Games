@@ -1,4 +1,4 @@
 .cart{
-    width: 500px;
-    border: 1px solid red;
+    width: 0px;
+    transition: ease all 1s;
 }
