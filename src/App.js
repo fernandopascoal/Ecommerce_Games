@@ -4,6 +4,8 @@ import './App.css';
 import './components/Products.css'
 import Header from './components/Header';
 import Nav from './components/Nav';
+import Cart_Button from './components/Cart_Button';
+import Cart from './components/Cart';
 
 
 function Products(){
@@ -29,10 +31,11 @@ function Products(){
         <div className='products_container'>
             <div key={item.id} className='products_info' >
                 <h2 className='title'>{item.name}</h2>
-                <di className='price_container'>
+                <p className='score'>Score: {item.score}</p>
+                <div className='price_container'>
                   <span className='price'>R$ {item.price.toFixed(2)}</span>
                   <button className='btn'>Adicionar ao Carrinho</button>  
-                </di>
+                </div>
                 
             </div>
             <img src={item.image} alt=""  className='product_img'/>
@@ -47,12 +50,16 @@ export default function App() {
   return (
     <div className="App">
       <div className="App_container">
-        <Header/>
+        <div className='App_header'>
+          <Header/>
+          <Cart_Button />
+        </div>
         <Nav/>
         <div className='Games_Content' >
           <Products  />
         </div>
       </div>
+      <Cart/>
     </div>
   );
 }

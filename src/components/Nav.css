@@ -7,11 +7,10 @@
 }
 
 .nav_info{
-    font-size: 20px;
-    color: #cccccc;
+    font-size: 1.1em;
+    color: #fffefe;
     margin-right: 10px;
     margin-left: 12px;
-    padding-top: 5px;
     text-align: left;
 }
 
@@ -24,27 +23,32 @@
 }
 
 .nav_icon {
-    width: 30px;
+    width: 15px;
     align-self: right;
-    margin: 5px;
+    margin: 5px 5px 2px 0px;
+    cursor: pointer;
 }
 
 .nav_container{
     width: 100%;
-    border: 1px solid #758b8b;
+    height: 20px;
+    border: 1px solid #758b75;
     border-radius: 5px;
     box-shadow: 20px 20px 60px #111111,
     -20px -20px 60px #1a2222;
-    background-color: #77727298;
+    background-color: #37ad0859;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     position: absolute;
     
 }
 
 .nav_list{
     list-style: none;
-    display: none;
+    margin-top: 2px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #215f08ef;
+    display: none;  
 }
 
 .nav_item{
@@ -52,11 +56,15 @@
     align-items: center;
     height: 30px;
     padding-left: 15px;
-    color: whitesmoke;
+    color: white;
+    opacity: 0.8;
+    font-weight: bolder;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .nav_item:hover{
-    background-color: whitesmoke;
+    background-color: black;
+    opacity: 0.6;
 }
 

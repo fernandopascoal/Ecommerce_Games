@@ -2,7 +2,25 @@ import React from 'react'
 import './Nav.css'
 import arrow from './../img/arrow-down-icon.svg'
 
+
+
 export default () => {
+
+    function orderList() {
+
+        let style = document.querySelector('.nav_list').style.display
+
+        if(style === 'none') {
+            document.querySelector('.nav_list').style.display='block'
+            document.querySelector('.nav_container').style.borderRadius='5px 5px 0px 0px'
+            
+        } else {
+            document.querySelector('.nav_list').style.display='none'
+            document.querySelector('.nav_container').style.borderRadius='5px 5px 5px 5px'
+        }
+        
+    }
+
     return (
         <div className='form_container'>
             <p className='nav_info'>Ordernar: </p>
@@ -10,7 +28,7 @@ export default () => {
             <div className='nav'>
                 <div className='nav_container'>
                     
-                    <img src={arrow} alt="" className='nav_icon' />
+                    <img src={arrow} alt="V" className='nav_icon' onClick={orderList}/>
                     
                     <ul className="nav_list">
                         <li className='nav_item' >Ordem Alfabética</li>
@@ -22,6 +40,9 @@ export default () => {
         </div>
     )
 }
+
+
+
 
 
 
