@@ -23,7 +23,7 @@ function Products(){
     
   }
 
-  console.log(products)
+  
 
   return (
     <Fragment>
@@ -34,7 +34,7 @@ function Products(){
                 <p className='score'>Score: {item.score}</p>
                 <div className='price_container'>
                   <span className='price'>R$ {item.price.toFixed(2)}</span>
-                  <button className='btn'>Adicionar ao Carrinho</button>  
+                  <button className='btn'  >Adicionar ao Carrinho</button>  
                 </div>
                 
             </div>
@@ -52,7 +52,7 @@ export default function App() {
       <div className="App_container">
         <div className='App_header'>
           <Header/>
-          <Cart_Button />
+          <Cart_Button numeroInicial = {0} />
         </div>
         <Nav/>
         <div className='Games_Content' >
