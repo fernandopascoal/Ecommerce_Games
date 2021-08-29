@@ -1,7 +1,8 @@
 import React from 'react'
 import './Cart.css'
+import Products from './Products'
 
-export default () => {
+export default (props) => {
 
     function closeCart() {
         document.querySelector('.cart').style.width = '0vw'
@@ -15,24 +16,24 @@ export default () => {
             <a onClick={closeCart} className='closeCart'>Fechar</a>
             <div className='cart_products'>
                 <div className='products_controller'>
-                    <p>------</p>
-                    <p>0,00</p>
-                    <a>excluir</a>
+                    <p className='item_name'></p>
+                    <p className='item_price'></p>
+                    <p className='item_delete'></p>
                 </div>
                 
             </div>
             <div className='cart_price'>
                 <p className='cart_subtotal'>
                 <span>Subtotal: </span>
-                <span>R$ 0,00</span> 
+                <span className='subtotal'></span> 
                 </p>
                 <p className='cart_frete'>
                     <span>Frete: </span>
-                    <span>R$ 0,00</span>
+                    <span className='frete'></span>
                 </p>
                 <p className='cart_total'>
                     <span>Total: </span>
-                    <span>R$ 0,00</span>
+                    <span className='total'></span>
                 </p>
             </div>
             <div className='cart_buttons'>

@@ -3,22 +3,11 @@
     src: url(../fonts/Century\ Gothic.ttf);
   }
 
-  @keyframes changeColor {
-    0% {
-      background-color: #7db313;
-    }
-    50% {
-      background-color: #93d313;
-    }
-    100% {
-      background-color: #92d115;
-    }
-  }
 
 .cart{
     width: 0vw;
     transition: ease all 0.5s;
-    display: flex;
+    display: none;
     flex-direction: column;
     font-family: 'Century Gotic';
     background-color:#011627;
@@ -43,6 +32,10 @@
     display: flex;
     justify-content: space-between;
     color: whitesmoke;
+}
+
+.item_price{
+    display: none;
 }
 
 .cart_price{

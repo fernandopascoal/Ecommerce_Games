@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import cart from './../img/cart-icon.svg'
-import './Cart_Button.css'
+import './CartButton.css'
 
 export default (props) => {
 
     function openCart() {
 
-        document.querySelector('.cart').style.width = '35vw'
+        document.querySelector('.cart').style.width = '40vw';
+        document.querySelector('.cart').style.display='flex';
          
     }
 
