@@ -38,6 +38,10 @@
     display: none;
 }
 
+.item_delete{
+    cursor: pointer;
+}
+
 .cart_price{
     margin: 10px;
 }

@@ -7,9 +7,9 @@ export default (props) => {
         document.querySelector('.cart').style.width = '0vw'
     }
 
-    function deleteIten() {
-        console.log('funcionou')
-      }
+    function deleteIten(){
+        console.log('funciona')
+    }
 
 
     return(

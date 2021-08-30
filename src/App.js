@@ -15,10 +15,13 @@ export default function App(props) {
   const [products, setProducts] = useState([])
   
   const UrlApi = "products.json";
+
+ 
   
   useEffect(() => {
     loadProducts();
   },[]);
+  
 
   const loadProducts = async () => {
     const response = await fetch(UrlApi)
@@ -31,17 +34,16 @@ export default function App(props) {
       let frete = 0;
       let total = 0;
 
+      
 
   const productsItens = products.map((item) => {
 
-      let cartItem = document.querySelector('.products_controller').cloneNode(true)
-        cartItem.querySelector('.item_name').innerHTML=item.name
-        cartItem.setAttribute('data-key', item.id)
-        cartItem.querySelector('.item_delete').innerHTML='excluir'
+    
+  
 
       return (
         <div className='products_container' key={item.id}>
-            <div  className='products_info' >
+            <div className='products_info' >
                 <h2 className='title'>{item.name}</h2>
                 <p className='score'>Score: {item.score}</p>
                 <div className='price_container'>
@@ -53,14 +55,24 @@ export default function App(props) {
             <img src={item.image} alt=""  className='product_img'/>
         </div>
     )
+
+    
+    
   
     function addCart() {
+
+  
+
+      
+    let cartItemBtn = document.querySelector('.item_delete').innerHTML='excluir';
       
       counter += 1
+      
 
 
       document.querySelector('.cart_itens').innerHTML = counter;
-      document.querySelector('.cart_products').append(cartItem);
+      document.querySelector('.item_name').append(item.name);
+      document.querySelector('.item_delete').append(cartItemBtn);
 
       subtotal +=  item.price;
 
@@ -82,10 +94,6 @@ export default function App(props) {
   
   });
 
-      
-
-    
-
 
     return (
 
@@ -93,7 +101,6 @@ export default function App(props) {
         <div className="App">
           <div className="App_container">
             <main className="main">
-              <div className='logo'></div>
               <header className='App_header'>
                 <Header/>
                 <CartButton  />
@@ -109,7 +116,7 @@ export default function App(props) {
               </div>
             </main>
           </div>
-          <Cart />
+          <Cart/>
         </div> 
       </MyContext.Provider>
       
