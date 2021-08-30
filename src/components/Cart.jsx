@@ -1,6 +1,5 @@
 import React from 'react'
 import './Cart.css'
-import Products from './Products'
 
 export default (props) => {
 
@@ -8,7 +7,9 @@ export default (props) => {
         document.querySelector('.cart').style.width = '0vw'
     }
 
-
+    function deleteIten() {
+        console.log('funcionou')
+      }
 
 
     return(
@@ -18,7 +19,7 @@ export default (props) => {
                 <div className='products_controller'>
                     <p className='item_name'></p>
                     <p className='item_price'></p>
-                    <p className='item_delete'></p>
+                    <a className='item_delete' onClick={deleteIten}></a>
                 </div>
                 
             </div>

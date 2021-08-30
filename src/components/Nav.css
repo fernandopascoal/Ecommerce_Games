@@ -68,3 +68,23 @@
     opacity: 0.6;
 }
 
+@media (max-width:500px){
+    .form_container{
+        display: flex;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+    .nav{
+        position: static;
+    }
+
+    .nav_container{
+        position: static;
+        width: 100%;
+    }
+
+    .nav_list{
+        background-color: #081803;
+    }
+}

@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import './Nav.css'
 import arrow from './../img/arrow-down-icon.svg'
+import MyContext from '../context/myContext';
 
 
 
-export default () => {
+export default function Nav(props){
+    
+    let xablau = []
+
+  
+    const {products, setProducts} = useContext(MyContext)
+
+   async function Ordem() {
+        
+    
+
+        xablau = await products.sort((a, b) => a.name.localeCompare(b.name))
+        console.log(products)
+        setProducts(xablau)
+      }
+
+      
 
     function orderList() {
+
+       
 
         let style = document.querySelector('.nav_list').style.display
 
@@ -21,6 +40,9 @@ export default () => {
         
     }
 
+
+    
+
     return (
         <div className='form_container'>
             <p className='nav_info'>Ordernar: </p>
@@ -31,7 +53,7 @@ export default () => {
                     <img src={arrow} alt="V" className='nav_icon' onClick={orderList}/>
                     
                     <ul className="nav_list">
-                        <li className='nav_item' >Ordem Alfabética</li>
+                        <li className='nav_item' onClick={Ordem} >Ordem Alfabética</li>
                         <li className='nav_item' >Avaliações(Score)</li>
                         <li className='nav_item' >Preço</li>
                     </ul>
@@ -40,28 +62,3 @@ export default () => {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <form action="" className='form_nav'>
-                <label className='nav_info'>Ordenar: </label>
-                <select name="" id="" className='nav_container'>
-                    <option className='nav_item' value=""></option>
-                    
-                    <option className='nav_item' value="alfabético">
-                        Ordem Alfabética
-                    </option>
-                    <option className='nav_item' value="score">Avaliações(Score)</option>
-                    <option className='nav_item' value="preco">Preço</option>
-                </select>
-            </form> */}

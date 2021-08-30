@@ -44,3 +44,21 @@
     margin-bottom: 5px;
 }
 
+@media (max-width:500px){
+.button_cart_container{
+    width: 80%;
+    justify-self: flex-end;
+    margin: 0px auto;
+    
+}  
+.button_cart {
+    width: 30%;
+}
+
+.button_cart_itens{
+    width: 70%;
+}
+
+
+}
+
