@@ -1,3 +1,14 @@
+# Teste Para Supera Inovações em Tecnologia.
+
+O App foi criado com React.
+Foi utilizado React Hooks, Context Api, e gerenciamento de estados globais.
+
+
+
+
+
+___________________________________________________________________________________________________________________
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
