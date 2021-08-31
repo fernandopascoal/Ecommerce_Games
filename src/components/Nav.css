@@ -92,20 +92,42 @@
 @media (max-width:500px){
     .form_container{
         display: flex;
-        margin-top: 50px;
+        flex-direction: column;
+        margin-top: 20px;
         margin-bottom: 20px;
-        width: 80%;
+        width: 90%;
+        font-size: 0.8em;
+        position: static;
     }
     .nav{
+        position: static;
+    }
+
+    .nav_info{
+        position: static;
+    }
+
+    .nav_content{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: 0.7em;
         position: static;
     }
 
     .nav_container{
         position: static;
         width: 100%;
+        font-size: 0.7em;
+        position: static;
     }
 
-    .nav_list{
+    .menu{
         background-color: #081803;
+        position: static;
+    }
+
+    .menu.opened{
+        position: static;
     }
 }

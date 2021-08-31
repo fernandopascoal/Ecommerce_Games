@@ -6,6 +6,8 @@
 
 .cart{
     width: 0vw;
+    height: 0vh;
+    overflow: hidden;
     transition: ease all 1s;
     font-family: 'Century Gotic';
     background-color:#011627;
@@ -103,6 +105,14 @@
     font-weight: 600;
     text-align: center;
     cursor: pointer;
+}
+
+@media (max-width:500px) {
+    .cart.opened{
+        height: 100vh;
+        width: 90%;
+        
+    }
 }
 
 
