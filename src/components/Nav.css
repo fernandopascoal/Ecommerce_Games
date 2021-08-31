@@ -10,7 +10,7 @@
     color: whitesmoke;
     text-align: right;
     margin-left: 2%;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bolder;
 }
 .nav_content{
@@ -101,6 +101,11 @@
     }
     .nav{
         position: static;
+    }
+
+    .infoFrete{
+        font-size: 0.8em;
+        margin-top: 10px;
     }
 
     .nav_info{

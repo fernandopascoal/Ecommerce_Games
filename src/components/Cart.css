@@ -6,7 +6,6 @@
 
 .cart{
     width: 0vw;
-    height: 0vh;
     overflow: hidden;
     transition: ease all 1s;
     font-family: 'Century Gotic';
@@ -108,6 +107,11 @@
 }
 
 @media (max-width:500px) {
+
+    .cart{
+        width: 0vw;
+        height: 0vh;
+    }
     .cart.opened{
         height: 100vh;
         width: 90%;
