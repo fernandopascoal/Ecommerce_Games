@@ -1,11 +1,25 @@
 .form_container{
-    width: 40%;
-    align-self: flex-end;
+    width: 100%;
     margin-right: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+  
 }
 
+.infoFrete{
+    color: whitesmoke;
+    text-align: right;
+    margin-left: 2%;
+    font-size: 1em;
+    font-weight: bolder;
+}
+.nav_content{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    
+   
+}
 .nav_info{
     font-size: 1.1em;
     color: #fffefe;
@@ -14,12 +28,15 @@
     text-align: left;
 }
 
+
+
 .nav{
     display: flex;
     flex-direction: column;
     width: 60%;
     position: relative;
     text-align: right;
+    
 }
 
 .nav_icon {
@@ -43,12 +60,16 @@
     
 }
 
-.nav_list{
+.menu{
     list-style: none;
     margin-top: 2px;
     border-radius: 0px 0px 5px 5px;
     background-color: #215f08ef;
     display: none;  
+}
+
+.menu.opened{
+    display: block;
 }
 
 .nav_item{

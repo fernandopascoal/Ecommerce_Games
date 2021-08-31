@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Nav.css'
 import arrow from './../img/arrow-down-icon.svg'
 import MyContext from '../context/myContext';
@@ -10,6 +10,7 @@ export default function Nav(props){
     let OrderList = []
 
     const {products, setProducts} = useContext(MyContext)
+    const [open, setOpen] = useState(false)
 
     let newProducts = [...products]
 
@@ -20,9 +21,7 @@ export default function Nav(props){
             return 0;
         })
             setProducts(OrderList)
-            document.querySelector('.nav_list').style.display='none'
-            document.querySelector('.nav_container').style.borderRadius='5px 5px 5px 5px'
-
+            setOpen();
             
       }
 
@@ -33,8 +32,7 @@ export default function Nav(props){
             return 0;
         })
             setProducts(OrderList)
-            document.querySelector('.nav_list').style.display='none'
-            document.querySelector('.nav_container').style.borderRadius='5px 5px 5px 5px'
+            setOpen();
 
             
       }
@@ -46,8 +44,7 @@ export default function Nav(props){
             return 0;
         })
             setProducts(OrderList)
-            document.querySelector('.nav_list').style.display='none'
-            document.querySelector('.nav_container').style.borderRadius='5px 5px 5px 5px'
+            setOpen();
 
             
       }
@@ -56,42 +53,31 @@ export default function Nav(props){
 
    
 
-    function orderList() {
-
-       
-
-        let style = document.querySelector('.nav_list').style.display
-
-        if(style === 'none') {
-            document.querySelector('.nav_list').style.display='block'
-            document.querySelector('.nav_container').style.borderRadius='5px 5px 0px 0px'
-            
-        } else {
-            document.querySelector('.nav_list').style.display='none'
-            document.querySelector('.nav_container').style.borderRadius='5px 5px 5px 5px'
-        }
-        
-    }
+   
 
 
     
 
     return (
         <div className='form_container'>
-            <p className='nav_info'>Ordernar: </p>
+            <p className='infoFrete'>*Frete gratis em compras acima de R$ 250,00</p>
+            <div className='nav_content'>
+                <p className='nav_info'>Ordernar: </p>
 
-            <div className='nav'>
-                <div className='nav_container'>
-                    
-                    <img src={arrow} alt="V" className='nav_icon' onClick={orderList}/>
-                    
-                    <ul className="nav_list">
-                        <li className='nav_item' onClick={alphaOrder} >Ordem Alfabética</li>
-                        <li className='nav_item' onClick={scoreOrder} >Avaliações(Score)</li>
-                        <li className='nav_item' onClick={priceOrder}>Preço</li>
-                    </ul>
+                <div className='nav'>
+                    <div className='nav_container'>
+            
+                        <img src={arrow} alt="V" className='nav_icon' onClick={() => setOpen(!open)}/>
+            
+                        <ul className={`menu ${open ? 'opened' : 'closer'}`}>
+                            <li className='nav_item' onClick={alphaOrder} >Ordem Alfabética</li>
+                            <li className='nav_item' onClick={scoreOrder} >Avaliações(Score)</li>
+                            <li className='nav_item' onClick={priceOrder}>Preço</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
         </div>
     )
 }

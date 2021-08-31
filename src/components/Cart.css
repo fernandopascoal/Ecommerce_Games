@@ -6,17 +6,22 @@
 
 .cart{
     width: 0vw;
-    transition: ease all 0.5s;
-    display: none;
-    flex-direction: column;
+    transition: ease all 1s;
     font-family: 'Century Gotic';
     background-color:#011627;
     border-left: 1px solid #212b2b;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.cart.opened{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    transition: ease all 1s;
+}
+
 .closeCart{
-    color: rgb(155, 32, 32);
+    color: #f5e027c5;
     font-weight: bolder;
     text-align: right;
     margin: 10px;
@@ -85,6 +90,7 @@
     font-size: 0.9em;
     font-weight: bold;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 .buy:active{
@@ -93,9 +99,10 @@
 
 .cancel{
     margin-top: 15px;
-    color: rgba(255, 0, 0, 0.5);
+    color: #f5e027ad;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
 }
 
 

@@ -101,8 +101,8 @@
     border: none;
     outline: none;
 
-    background: linear-gradient(to top, #148356, #3db90c);
-    color: black;
+    background: #6a970e;
+    color: whitesmoke;
     font-size: 0.8em;
     font-weight: bolder; 
     transition: all 1s ease ;
@@ -110,8 +110,8 @@
     cursor: pointer;
 }
 
-.btn:hover{ 
-    background: linear-gradient(to left bottom, #05370d, #317a00);
+.btn:active{ 
+    background: linear-gradient(to right, #7db313, #a6ee18 );;
     color: white;
     transition: all 1s ease;
 }
